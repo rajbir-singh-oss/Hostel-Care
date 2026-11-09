@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HostelCare | Complaint Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <a href="#home" class="logo">Hostel<span>Care</span></a>
+
+        <nav>
+            <a href="#home">Dashboard</a>
+            <a href="#submit">Submit Complaint</a>
+            <a href="#track">Track Complaints</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Welcome Section -->
+        <section class="hero" id="home">
+            <div>
+                <p class="eyebrow">HOSTEL MAINTENANCE PORTAL</p>
+                <h1>A better hostel starts with a better response.</h1>
+                <p class="hero-text">
+                    Report maintenance problems, view complaint records,
+                    and find the right support for your hostel room.
+                </p>
+                <a href="#submit" class="btn">Report a Problem</a>
+            </div>
+
+            <div class="hero-icon" aria-hidden="true">⌂</div>
+        </section>
+
+        <!-- Dashboard Statistics -->
+        <section class="section" id="dashboard">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">OVERVIEW</p>
+                    <h2>Complaint Dashboard</h2>
+                    <p class="muted">A quick overview of maintenance requests.</p>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <article class="stat-card">
+                    <p>Total Complaints</p>
+                    <h3>24</h3>
+                    <span>All reported issues</span>
+                </article>
+
+                <article class="stat-card pending-card">
+                    <p>Pending</p>
+                    <h3>08</h3>
+                    <span>Awaiting action</span>
+                </article>
+
+                <article class="stat-card progress-card">
+                    <p>In Progress</p>
+                    <h3>06</h3>
+                    <span>Under maintenance</span>
+                </article>
+
+                <article class="stat-card resolved-card">
+                    <p>Resolved</p>
+                    <h3>10</h3>
+                    <span>Completed issues</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Complaint Categories -->
+        <section class="section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">WHAT NEEDS FIXING?</p>
+                    <h2>Complaint Categories</h2>
+                </div>
+            </div>
+
+            <div class="category-grid">
+                <article class="category-card">
+                    <span class="category-icon">🚰</span>
+                    <h3>Plumbing</h3>
+                    <p>Water leakage, taps and drainage.</p>
+                </article>
+
+                <article class="category-card">
+                    <span class="category-icon">💡</span>
+                    <h3>Electrical</h3>
+                    <p>Lights, fans and electrical faults.</p>
+                </article>
+
+                <article class="category-card">
+                    <span class="category-icon">🪑</span>
+                    <h3>Furniture</h3>
+                    <p>Broken chairs, beds and tables.</p>
+                </article>
+
+                <article class="category-card">
+                    <span class="category-icon">🧹</span>
+                    <h3>Cleanliness</h3>
+                    <p>Room and common-area cleaning.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Submit Complaint Form -->
+        <section class="section form-section" id="submit">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">RAISE A REQUEST</p>
+                    <h2>Submit a Complaint</h2>
+                    <p class="muted">
+                        Provide accurate information about the problem.
+                    </p>
+                </div>
+            </div>
+
+            <form action="#" method="get" class="complaint-form">
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="student-name">Student Name</label>
+                        <input type="text" id="student-name"
+                            name="student-name" placeholder="Enter your name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="student-id">Registration Number</label>
+                        <input type="text" id="student-id"
+                            name="student-id" placeholder="Enter registration number"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="block">Hostel Block</label>
+                        <select id="block" name="block" required>
+                            <option value="">Select block</option>
+                            <option>Block A</option>
+                            <option>Block B</option>
+                            <option>Block C</option>
+                            <option>Block D</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="room">Room Number</label>
+                        <input type="text" id="room" name="room"
+                            placeholder="e.g. 204" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Complaint Category</label>
+                        <select id="category" name="category" required>
+                            <option value="">Choose a category</option>
+                            <option>Plumbing</option>
+                            <option>Electrical</option>
+                            <option>Furniture</option>
+                            <option>Cleanliness</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="priority">Priority</label>
+                        <select id="priority" name="priority" required>
+                            <option value="">Select priority</option>
+                            <option>Low</option>
+                            <option>Medium</option>
+                            <option>High</option>
+                            <option>Urgent</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="date">Date of Complaint</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="description">Problem Description</label>
+                        <textarea id="description" name="description"
+                            rows="5"
+                            placeholder="Describe the problem and its location..."
+                            required></textarea>
+                    </div>
+                </div>
+
+                <p class="form-note">
+                    For immediate danger, contact the hostel warden
+                    or appropriate emergency service directly.
+                </p>
+
+                <button type="submit" class="btn">Submit Complaint</button>
+            </form>
+        </section>
+
+        <!-- Complaint Tracking Table -->
+        <section class="section" id="track">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">REQUEST HISTORY</p>
+                    <h2>Recent Complaints</h2>
+                    <p class="muted">
+                        Example records showing how complaints can be tracked.
+                    </p>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Complaint ID</th>
+                            <th>Issue</th>
+                            <th>Location</th>
+                            <th>Date</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>HC-001</td>
+                            <td>Water Leakage</td>
+                            <td>Block A, Room 204</td>
+                            <td>28 Oct 2026</td>
+                            <td><span class="priority high">High</span></td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>HC-002</td>
+                            <td>Broken Chair</td>
+                            <td>Block B, Room 105</td>
+                            <td>27 Oct 2026</td>
+                            <td><span class="priority medium">Medium</span></td>
+                            <td><span class="status progress">In Progress</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>HC-003</td>
+                            <td>Faulty Light</td>
+                            <td>Block A, Room 310</td>
+                            <td>26 Oct 2026</td>
+                            <td><span class="priority low">Low</span></td>
+                            <td><span class="status resolved">Resolved</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>HC-004</td>
+                            <td>Cleaning Request</td>
+                            <td>Block C, Room 112</td>
+                            <td>25 Oct 2026</td>
+                            <td><span class="priority medium">Medium</span></td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="table-note">
+                Demo only: these sample complaints are not live records.
+            </p>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+            <p class="eyebrow">NEED HELP?</p>
+            <h2>Contact Hostel Support</h2>
+            <p>
+                For urgent maintenance problems, contact your hostel
+                warden or the authorised maintenance team.
+            </p>
+
+            <div class="contact-card">
+                <h3>Hostel Warden</h3>
+                <p>Email: warden@example.com</p>
+                <p>Phone: Add your hostel's official contact number</p>
+                <p>Office: Hostel Administration Office</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="#home" class="logo footer-logo">
+            Hostel<span>Care</span>
+        </a>
+        <p>Making hostel maintenance easier, one report at a time.</p>
+        <p class="copyright">
+            © 2026 HostelCare. Academic project demonstration.
+        </p>
+    </footer>
+
+</body>
+</html>
